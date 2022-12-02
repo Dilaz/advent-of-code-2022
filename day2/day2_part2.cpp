@@ -55,22 +55,6 @@ const std::map<char, Result> RESULT_MAP {
     {'Z', Result::WIN},
 };
 
-Result checkResult(RPS first, RPS second) {
-    if (first == second) {
-        return Result::DRAW;
-    }
-
-    if (first == RPS::Rock && second == RPS::Scissors) {
-        return Result::WIN;
-    } else if (first == RPS::Paper && second == RPS::Rock) {
-        return Result::WIN;
-    } else if (first == RPS::Scissors && second == RPS::Paper) {
-        return Result::WIN;
-    }
-
-    return Result::LOSE;
-}
-
 RPS getCondition(RPS first, Result result) {
     if (result == Result::DRAW) {
         return first;
