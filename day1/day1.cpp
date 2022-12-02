@@ -16,9 +16,10 @@ using std::istringstream;
 using std::max;
 #include <algorithm>
 using std::transform;
+using std::back_inserter;
 #include <numeric>
 using std::accumulate;
-usings std::max_element;
+using std::max_element;
 
 const char *INPUT_FILE = "input.txt";
 
@@ -51,7 +52,7 @@ int main() {
 
     vector<int> elfWeights;
     // Calculate total sum of the calories
-    transform(elves.begin(), elves.end(), std::back_inserter(elfWeights), [](auto weights){
+    transform(elves.begin(), elves.end(), back_inserter(elfWeights), [](auto weights){
         return accumulate(weights.begin(), weights.end(), 0);
     });
 
