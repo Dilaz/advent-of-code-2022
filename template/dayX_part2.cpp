@@ -20,7 +20,7 @@ using std::max;
 using std::back_inserter;
 using std::sort;
 
-const char *INPUT_FILE = "input.txt";
+const char *INPUT_FILE = "test_input.txt";
 
 int main() {
    ifstream iFile(INPUT_FILE);
